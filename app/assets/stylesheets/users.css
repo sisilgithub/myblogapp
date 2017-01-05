@@ -1,0 +1,82 @@
+
+.navbar {
+
+	border: 2px solid #23ca98 !important;
+	box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
+}
+
+
+.navbar ul li a{
+	color: black !important;
+	padding: 8px 15px 8px 15px;
+}
+.navbar ul li a:hover{
+	color: #337ab7 !important;
+	background-color: transparent;
+
+}
+
+#myrightoplink {
+	margin-right: 10px ;
+	margin-top: 5px ;
+	font-size: 12px;
+}
+
+#myrightoplink li a:hover{
+	background-color: transparent;
+}
+#myloginicon {
+	padding-right: 5px;
+}
+
+#mysignupicon{
+	padding-right: 5px;
+}
+
+#mynavclass{
+	position: absolute;
+	left: 200px;
+	bottom: 0px;
+
+
+}
+
+.search{
+    background-color: white;
+    float: right;
+    display: block;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+}
+.fa-search{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+.search input{
+    width: 300px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 7px 10px 5px 30px;
+
+}
+
+
+#popcategories{
+	padding: 5px;
+	box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
+	height: 100%;
+}
+
+#popcategories a{
+	border: 0px !important;
+	/*border-bottom: 1px solid #ccc !important;*/
+}
+
+#rightpanelshadow{
+	box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
+}
