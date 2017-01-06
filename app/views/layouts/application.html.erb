@@ -8,34 +8,50 @@
   <%= csrf_meta_tags %>
     
 </head>
+
 <body>
 <div class="container">
-  <nav class="navbar">
-      <img src="/assets/header.png" style="float:left;"></img>
-      <ul class="nav navbar-nav" id="mynavclass">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-        <li><a href="#">Page 4</a></li>
-        <li><a href="#">Page 5</a></li>
-      </ul>
-
-      <div class="search">
-      <form>
-        <span class="fa fa-search" aria-hidden="true"></span>
-        <input type="text" class="form-control" name="search" placeholder="Search..">
-      </form>
-    </div>  
-    <ul class="nav navbar-nav navbar-right " id="myrightoplink">
-      <li><a href="#">
-          <span class="glyphicon glyphicon-user" id="mysignupicon"></span>Sign Up</a>
-      </li>
-      <li><a href="#">
-          <span class="glyphicon glyphicon-log-in" id="myloginicon"></span> Login</a>
-      </li>
-    </ul>   
+  <div class="row">
+    <nav class="navbar">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="/assets/header.png" width=75% height=75% ></img>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="row">
+              <ul class="nav navbar-nav navbar-right " id="myrightoplink">
+                <li><a href="#">
+                  <span class="glyphicon glyphicon-user" id="mysignupicon"></span>Sign Up</a>
+                </li>
+                <li><a href="#">
+                  <span class="glyphicon glyphicon-log-in" id="myloginicon"></span> Login</a>
+                </li>
+              </ul>
+            </div>
+          <div class="row">
+            <form class="search">
+              <span class="fa fa-search" aria-hidden="true"></span>
+              <input type="text" class="form-control" name="search" placeholder="Search..">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="nav navbar-nav" id="mynavclass">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+            <li><a href="#">Page 4</a></li>
+            <li><a href="#">Page 5</a></li>
+          </ul>
+        </div>
+      </div>
+       
   </nav>
+  </div>
 
 </div>
 
