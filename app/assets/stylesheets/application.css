@@ -15,3 +15,60 @@
  */
 
 
+.navbar {
+
+	/*border: 2px solid #23ca98 !important;*/
+	box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
+}
+
+
+.navbar ul li a{
+	color: black !important;
+}
+.navbar ul li a:hover{
+	color: #337ab7 !important;
+	background-color: #fff;
+
+}
+
+#myrightoplink {
+	margin-right: 10px ;
+	margin-top: 5px ;
+	font-size: 12px;
+}
+
+#myrightoplink li a:hover{
+	background-color: transparent;
+}
+#myloginicon {
+	padding-right: 5px;
+}
+
+#mysignupicon{
+	padding-right: 5px;
+}
+
+#mynavclass{
+
+
+}
+
+.search{
+    background-color: transparent;
+    margin-right: 15px; 
+}
+.fa-search{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+.search input{
+    /*width: 300px;*/
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 7px 10px 5px 30px;
+
+}
