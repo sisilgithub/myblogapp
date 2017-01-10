@@ -26,11 +26,12 @@
                   <div class="row">
                     <div class="col-md-12">
                       <ul class="nav navbar-nav navbar-right " id="myrightoplink">
-                        <li><a href="#">
-                          <span class="glyphicon glyphicon-user" id="mysignupicon"></span>Sign Up</a>
+                        <li>
+                          <div class="glyphicon glyphicon-user" id="mysignupicon"><%= link_to "Signup", new_user_path %></div>
+
                         </li>
-                        <li><a href="#">
-                          <span class="glyphicon glyphicon-log-in" id="myloginicon"></span> Login</a>
+                        <li>
+                          <span class="glyphicon glyphicon-log-in" id="myloginicon"><%= link_to "Login", new_user_path %></span>
                         </li>
                       </ul>
                     </div>
