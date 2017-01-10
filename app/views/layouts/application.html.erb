@@ -3,13 +3,15 @@
   <head>
     <title> <%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    
   </head>
 
   <body>
-    <div class="container" ">
+    <header class="container">
       <div class="row" style="background-color: #fff;"">
         <nav class="navbar">
           <div class="row">
@@ -38,11 +40,11 @@
                 <div class="row">
                   <div class="col-md-8">
                     <ul class="nav navbar-nav" id="mynavclass">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Popular Gadgets</a></li>
-                      <li><a href="#">Recent Gadgets</a></li>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Contact Us</a></li>
+                      <li><%= link_to "Home", static_pages_home_path %></li>
+                      <li><%= link_to "Popular Gadgets", '#' %></li>
+                      <li><%= link_to "Recent Posts", '#' %></li>
+                      <li><%= link_to "About Us", static_pages_about_us_path %></li>
+                      <li><%= link_to "Contact Us", static_pages_contact_us_path %></li>
                     </ul>
                   </div>
                   <div class="col-md-4" >
@@ -56,9 +58,21 @@
           </div>
         </nav>
       </div>
-
-    	<%= yield %>
+    </header>
+    <div class="container">
+        <%= yield %>
     </div>
-
+    <footer class="container footer">
+      <small>
+        Latest Technology and Consumer electronics news and reviews.
+      </small>
+      <nav>
+        <ul>
+          <li><%= link_to "About Us",   static_pages_about_us_path %></li>
+          <li><%= link_to "Contact Us", static_pages_contact_us_path %></li>
+          <li><a href="http://news.railstutorial.org/">News</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
