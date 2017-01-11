@@ -1,0 +1,55 @@
+<header class="container">
+  <div class="row" style="background-color: #fff;"">
+    <nav class="navbar">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/assets/header.png" width=100% height=100% style="padding-left: 5px;" ></img>
+        </div>
+
+        <div class="col-md-9">
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav navbar-nav navbar-right " id="myrightoplink">
+                    <li style="margin-right: 10px;">
+                      <div> <i class="glyphicon glyphicon-user" id="mysignupicon"></i><%= link_to "Signup", new_user_path %></div>
+
+                    </li>
+                    <li style="margin-right: 10px;">
+                      <div> <i class="glyphicon glyphicon-log-in" id="myloginicon"></i><%= link_to "Login", '#' %></span>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+            </div>   
+          </div>
+            <div class="row">
+              <div class="col-md-8">
+                <ul class="nav navbar-nav" id="mynavclass">
+                  <li><%= link_to "Home", static_pages_home_path %></li>
+                  <li><%= link_to "Popular Gadgets", '#' %></li>
+                  <li><%= link_to "Recent Posts", '#' %></li>
+                  <li><%= link_to "About Us", static_pages_about_us_path %></li>
+                  <li><%= link_to "Contact Us", static_pages_contact_us_path %></li>
+                </ul>
+              </div>
+              <div class="col-md-4" id="header_search_bar">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div> 
+      </div>
+    </nav>
+  </div>
+</header>
