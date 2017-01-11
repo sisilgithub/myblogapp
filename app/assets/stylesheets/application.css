@@ -19,25 +19,22 @@
 .navbar {
 	box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
 }
+.navbar ul li a:hover{
+ color: #23ca98 !important;	
+ cursor: pointer; 
+ background-color: transparent;
+ text-decoration: none;
+ }
 
 #mynavclass li a:hover{
-	color: #23ca98 !important;
-	background-color: transparent;
 	font-weight: bold;
 	border-right: 3px solid #23ca98 !important;
 
 }
 
- .navbar ul li a:hover{
- color: #23ca98 !important;	
- cursor: pointer; 
- text-decoration: none;
- }
-
-
 
 #myrightoplink {
-	margin-right: 30px ;
+	margin-right: 10px ;
 	margin-top: 15px ;
 	margin-bottom: 10px;
 	font-size: 14px;
@@ -46,17 +43,10 @@
 	background-color: transparent;
 }
 
-#myloginicon {
+#myloginicon, #mysignupicon {
 	padding-right: 5px;
 	margin-top: 5px;
 }
-
-#mysignupicon{
-	padding-right: 5px;
-	margin-top: 5px;
-}
-
-
 
 
 #mynavclass a{
@@ -67,21 +57,9 @@
 	border-right: 2px solid #f2f2f2 !important;
 }
 
-.search{
-    background-color: transparent;
-    margin-right: 15px; 
-}
-.fa-search{
-    position: absolute;
-    padding-top: 10px;
-    padding-left: 10px;
-
-}
-.search input{
-    box-sizing: border-box;
-    border:1px solid #ccc;
-    border-radius: 4px;
-    font-size: 20px;
-    padding: 7px 10px 5px 30px;
-
+#header_search_bar{
+	margin-right: 0px;
+	padding-left: 0px; 
+	padding-right: 25px; 
+	margin-top: 5px;
 }

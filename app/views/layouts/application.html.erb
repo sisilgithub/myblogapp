@@ -48,10 +48,16 @@
                       <li><%= link_to "Contact Us", static_pages_contact_us_path %></li>
                     </ul>
                   </div>
-                  <div class="col-md-4" >
-                    <form class="search" style="margin-top: 5px;">
-                      <span class="fa fa-search" aria-hidden="true"></span>
-                      <input type="text" class="form-control" name="search" placeholder="Search..">
+                  <div class="col-md-4" id="header_search_bar">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 </div>
