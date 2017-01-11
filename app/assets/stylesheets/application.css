@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require './custom.scss'
+ *= require_tree
  *= require_self
  */
 
@@ -22,7 +22,7 @@
 
 #mynavclass li a:hover{
 	color: #23ca98 !important;
-	background-color: #fff;
+	background-color: transparent;
 	font-weight: bold;
 	border-right: 3px solid #23ca98 !important;
 
@@ -31,17 +31,21 @@
  .navbar ul li a:hover{
  color: #23ca98 !important;	
  cursor: pointer; 
+ text-decoration: none;
  }
+
+
 
 #myrightoplink {
 	margin-right: 30px ;
-	margin-top: 5px ;
-	font-size: 12px;
+	margin-top: 15px ;
+	margin-bottom: 10px;
+	font-size: 14px;
 }
-
-#myrightoplink li a:hover{
+#myrightoplink a:hover{
 	background-color: transparent;
 }
+
 #myloginicon {
 	padding-right: 5px;
 	margin-top: 5px;
@@ -51,6 +55,9 @@
 	padding-right: 5px;
 	margin-top: 5px;
 }
+
+
+
 
 #mynavclass a{
 	font-size: 15px !important;
