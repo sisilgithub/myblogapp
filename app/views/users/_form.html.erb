@@ -19,7 +19,15 @@
       <br>
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-        <%= f.text_field :email, id: "Email", class: "form-control", type: "text", placeholder:"Enter your Email"   %>
+        <%= f.text_field :email, id: "Email", class: "form-control", type: "text", placeholder:"Enter your Email" %>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+        <%= f.text_field :password, id: "password", class: "form-control", type: "text", placeholder:"New Password" %>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+        <%= f.text_field :password_confirmation, id: "password_confirmation", class: "form-control", type: "text", placeholder:"Confirm New Password" %>
       </div>
     </div>
   </div>
