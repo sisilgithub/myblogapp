@@ -1,3 +1,26 @@
 <% provide(:title, "About Us") %>
-<h1>StaticPages#about_us</h1>
-<p>Find me in app/views/static_pages/about_us.html.erb</p>
+<div class="row">
+	<div class="col-md-9">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="font-size: 46px; float: left; margin-bottom: 10px;">About Us</h1>
+					
+				</div>
+			</div>
+			<div class="row">
+			<div class="col-md-9"><h2 style="text-align: left;">Latest Technology and Consumer electronics news and reviews. Gadget Mania covers gadgets, science, designs, softwares and technology news.</h2></div>
+				<div class="col-md-3">
+					<%= link_to "Sign up now!", new_user_path , class: "btn btn-lg btn-primary", :style=> "background-color: #ff3d00; border-color:#ff3d00;" %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="col-md-3">
+	  <%= render('static_pages/emailnewsletter')%>
+	  <%= render('static_pages/trending')%>
+	</div>
+</div>
