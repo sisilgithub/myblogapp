@@ -5,14 +5,17 @@
 
 
 #trending .fa-clock-o{padding-left: 2px;padding-right: 0px;color: #777777;}
-#trending .panel-body{padding: 5px;border: none;}
+#trending .panel-body{padding: 2px;border: none;}
 #trending .panel-body a{display: block;vertical-align: middle;border: none;}
 #trending .panel-body a:hover{color: #014087;}
-#listitem{display: inline-block;padding-top: 5px;}
-#listitem .numbers{font-size: 24px;}
+#listitem{display: inline-block;padding-top: 2px;}
+#listitem .numbers{font-size: 20px; padding-top:10px !important;}
 #listitem p{line-height: 1.5em;height: 3em;overflow: hidden;}
 #listitem .fa-chevron-right{position: relative;top: 10px;}
 
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {height: 100%; width:100%}
+#myCarousel{
+	padding: 0px !important;
+}

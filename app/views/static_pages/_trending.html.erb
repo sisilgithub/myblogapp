@@ -1,8 +1,9 @@
 <div class="row">
+<div class="col-md-12">
   <div class="panel panel-default" id="trending">
     <div class="panel-heading" >
     <span  class="fa fa-clock-o fa-2x text-muted" aria-hidden="true"></span>
-      <p style="display: inline-block; font-size: 20px;">TRENDING</p>
+      <p style="display: inline-block; font-size: 18px;">TRENDING</p>
     </div>
     <div class="panel-body" >
       <div class="list-group">
@@ -11,8 +12,8 @@
           <%count=count+1;%>
           <a href="#" class="list-group-item" >
             <div id="listitem" >
-              <div class="col-md-2 col-xs-2">
-                <span class="text-muted numbers" ><%=count%>.</span>
+              <div class="col-md-2 col-xs-2 numbers">
+                <span class="text-muted" ><%=count%>.</span>
               </div>
               <div class="col-md-8 col-xs-8">
                 <p ><%=posts.post_title%></p>
@@ -28,4 +29,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
