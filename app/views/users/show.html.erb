@@ -4,20 +4,33 @@
 	<div class="col-md-9">
 		<div class="well">
 			<ul class="nav nav-tabs">
-			    <li class="active"><a data-toggle="tab" href="#home" style="font-weight: 700;">Profile</a></li>
-    			<li><a data-toggle="tab" href="#menu1" style="font-weight: 700;">Feeds</a></li>
-    			<li><a data-toggle="tab" href="#menu2" style="font-weight: 700;">Posts</a></li>
+			    <li class="active"><a data-toggle="tab" href="#home" style="font-weight: 700;">Feeds</a></li>
+    			<li><a data-toggle="tab" href="#menu1" style="font-weight: 700;">Profile</a></li>
+    			<li><a data-toggle="tab" href="#menu2" style="font-weight: 700;">Your Posts</a></li>
     			<li><a data-toggle="tab" href="#menu3" style="font-weight: 700;">Settings</a></li>
   			</ul>
 
   			<div class="tab-content">
 			    <div id="home" class="tab-pane fade in active">
-			      	<h1 >Welcome <%= @user.name %></h1>
-			      	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			      	
 			    </div>
 			    <div id="menu1" class="tab-pane fade">
-			      	<h3>Menu 1</h3>
-			      	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		      	<div class="row" style="margin-top: 20px;">
+		      		<div class="col-md-6">
+    						<img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"  alt="" class="img-rounded">
+  						</div>
+					    <div class="col-md-6" style="margin-top: 20px;">
+					      <blockquote>
+					        <p><%= @user.name %></p>
+					        <small><cite title="Source Title">London, United Kingdom  <i class="icon-map-marker"></i></cite></small>
+					      </blockquote>
+					      <p>
+					        <i class="icon-envelope"></i> masterwayne@batman.com <br>
+					        <i class="icon-globe"></i> www.bootsnipp.com <br>
+					        <i class="icon-gift"></i> January 30, 1974
+					      </p>
+					    </div>
+		      	</div>
 			    </div>
 			    <div id="menu2" class="tab-pane fade">
 			    	<h3>Menu 2</h3>
