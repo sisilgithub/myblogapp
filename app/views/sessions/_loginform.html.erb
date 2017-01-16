@@ -1,0 +1,25 @@
+<%= bootstrap_form_for(:session, url:login_path, inline_errors: false) do |f| %>
+  <div class="row" >
+    <div class="col-md-9 col-md-offset-1 " id="signup">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <%= f.text_field :email, id: "Email", class: "form-control input-lg", type: "text", placeholder:"Enter your Email", hide_label: true %>
+      </div>
+      <%= f.errors_on :email, hide_attribute_name: true %>
+      <br>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+        <%= f.text_field :password, id: "password", class: "form-control input-lg", type: "password", placeholder:"Password", hide_label: true%>
+      </div>
+      <%= f.errors_on :password, hide_attribute_name: true %>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-1">
+      <button type="submit" class="btn btn-default" style="width:100%; background-color: #ff3d00;color: white; font-weight: bold; height: 40px;">
+      <i class="fa fa-check"></i>
+      Login</button>
+    </div>
+  </div>
+<% end %>

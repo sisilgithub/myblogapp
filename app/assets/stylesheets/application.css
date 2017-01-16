@@ -19,7 +19,7 @@
 }
 
 .navbar ul li a:hover{
- cursor: pointer; 
+ 	cursor: pointer; 
  }
 
 
@@ -31,7 +31,7 @@
 
 
 .affix {
-      top: 0;
-      width: inherit;
-      z-index: 9999 !important;
+	top: 0;
+	width: inherit;
+	z-index: 9999 !important;
   }
