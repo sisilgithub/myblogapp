@@ -1,6 +1,14 @@
-<h1>Edit profile</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<% provide(:title, "Edit User")%>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><%=link_to 'My Account', current_user%></li>
+  <li class="breadcrumb-item active">Settings</li>
+</ol>
+<div  class="row">
+	<div class="col-md-9">
+		<div class="well">
+			<%= render 'editform' %>
+		</div>		
+	</div>
+</div>

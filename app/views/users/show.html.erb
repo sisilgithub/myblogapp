@@ -1,27 +1,27 @@
+<% provide(:title, "My account") %>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item active">My Account</li>
+</ol>
 <div class="row">
-<!-- <p id="notice"><%= notice %></p>
- -->
 	<div class="col-md-9">
 		<div class="well">
 			<ul class="nav nav-tabs">
-			    <li class="active"><a data-toggle="tab" href="#home" style="font-weight: 700;">Feeds</a></li>
-    			<li><a data-toggle="tab" href="#menu1" style="font-weight: 700;">Profile</a></li>
-    			<li><a data-toggle="tab" href="#menu2" style="font-weight: 700;">Your Posts</a></li>
-    			<li><a data-toggle="tab" href="#menu3" style="font-weight: 700;">Settings</a></li>
+			    <li class="active"><a data-toggle="tab" href="#home" style="font-weight: 700;">profile</a></li>
+    			<li><a data-toggle="tab" href="#feeds" style="font-weight: 700;">feeds</a></li>
+    			<li><a data-toggle="tab" href="#yourposts" style="font-weight: 700;">Your Posts</a></li>
+    			<li><a data-toggle="tab" href="#settings" style="font-weight: 700;">Settings</a></li>
   			</ul>
 
   			<div class="tab-content">
 			    <div id="home" class="tab-pane fade in active">
-			      	
-			    </div>
-			    <div id="menu1" class="tab-pane fade">
-		      	<div class="row" style="margin-top: 20px;">
+			      <div class="row" style="margin-top: 20px;">
 		      		<div class="col-md-6">
     						<img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"  alt="" class="img-rounded">
   						</div>
 					    <div class="col-md-6" style="margin-top: 20px;">
 					      <blockquote>
-					        <p><%= @user.name %></p>
+					        <p><%= current_user.name %></p>
 					        <small><cite title="Source Title">London, United Kingdom  <i class="icon-map-marker"></i></cite></small>
 					      </blockquote>
 					      <p>
@@ -30,22 +30,20 @@
 					        <i class="icon-gift"></i> January 30, 1974
 					      </p>
 					    </div>
-		      	</div>
+		      	</div>	
 			    </div>
-			    <div id="menu2" class="tab-pane fade">
-			    	<h3>Menu 2</h3>
-			      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			    <div id="feeds" class="tab-pane fade">
 			    </div>
-			    <div id="menu3" class="tab-pane fade">
-			      	<h3>Menu 3</h3>
-			      	<p>WGR Vs. MRFR</p>
+			    <div id="yourposts" class="tab-pane fade">
+			    </div>
+			    <div id="settings" class="tab-pane fade">
+			    <%= render 'editform'%>
 			    </div>
 			</div>
 			
 		</div>
 	</div>
-	<%= current_user.id %>
-	<%= params[:id] %>
-	<%= link_to 'Edit', edit_user_path(@user) %> |
-	<%= link_to 'Back', users_path %>
+	<div class="col-md-3">
+	  <%= render('static_pages/trending')%>
+	</div>
 </div>

@@ -1,0 +1,13 @@
+
+<h1>Update your profile</h1>
+<%= bootstrap_form_for(@user, label_errors: true) do |f| %>
+	<div class="row">
+		<div class="col-md-9 col-md-offset-1 ">
+		  <%= f.text_field :name, icon: "user"%>
+		  <%= f.email_field :email, icon: "envelope" %>
+		  <%= f.password_field :password, icon:"exclamation-sign" %>
+		  <%= f.password_field :password_confirmation, icon:"exclamation-sign" %>
+		  <%= f.submit "save changes", class: "btn btn-success" %>
+		</div>
+	</div>
+<% end %>
