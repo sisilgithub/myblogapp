@@ -1,16 +1,18 @@
 <% provide(:title, "My account") %>
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item active">My Account</li>
+  <li class="breadcrumb-item active"><%=@user.name%></li>
 </ol>
 <div class="row">
 	<div class="col-md-9">
 		<div class="well">
 			<ul class="nav nav-tabs">
 			    <li class="active"><a data-toggle="tab" href="#home" style="font-weight: 700;">profile</a></li>
-    			<li><a data-toggle="tab" href="#feeds" style="font-weight: 700;">feeds</a></li>
-    			<li><a data-toggle="tab" href="#yourposts" style="font-weight: 700;">Your Posts</a></li>
-    			<li><a data-toggle="tab" href="#settings" style="font-weight: 700;">Settings</a></li>
+			    <% if logged_in? && current_user?(@user)%>
+    				<li><a data-toggle="tab" href="#feeds" style="font-weight: 700;">feeds</a></li>
+    				<li><a data-toggle="tab" href="#yourposts" style="font-weight: 700;">Your Posts</a></li>
+    				<li><a data-toggle="tab" href="#settings" style="font-weight: 700;">Settings</a></li>
+    			<%end%>
   			</ul>
 
   			<div class="tab-content">
@@ -21,7 +23,7 @@
   						</div>
 					    <div class="col-md-6" style="margin-top: 20px;">
 					      <blockquote>
-					        <p><%= current_user.name %></p>
+					        <p><%= @user.name %></p>
 					        <small><cite title="Source Title">London, United Kingdom  <i class="icon-map-marker"></i></cite></small>
 					      </blockquote>
 					      <p>

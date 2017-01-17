@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
+  before_action :stop_sign_up, only: [:new, :create]
 
   # GET /users
   # GET /users.json
@@ -70,16 +73,29 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      if logged_in? && current_user.id == params[:id].to_i
-
         @user = User.find(params[:id])
-      else
-        redirect_to root_path
-      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location  
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    def correct_user
+      redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def stop_sign_up
+      if logged_in?
+        redirect_to current_user
+      end
     end
 end

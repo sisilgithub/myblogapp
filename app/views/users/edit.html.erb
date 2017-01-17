@@ -2,7 +2,7 @@
 <% provide(:title, "Edit User")%>
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item"><%=link_to 'My Account', current_user%></li>
+  <li class="breadcrumb-item"><%=link_to current_user.name, current_user%></li>
   <li class="breadcrumb-item active">Settings</li>
 </ol>
 <div  class="row">
