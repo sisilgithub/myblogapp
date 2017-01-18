@@ -3,24 +3,25 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
   before_action :stop_sign_up, only: [:new, :create]
+  before_action :admin_user,     only: :destroy
 
   # GET /users
   # GET /users.json
   def index
     @users = User.paginate(page: params[:page]) 
-    @latest_posts= Post.all
+    @latest_posts= Micropost.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @latest_posts= Post.all
+    @latest_posts= Micropost.all
   end
 
   # GET /users/new
   def new
     @user = User.new
-    @latest_posts= Post.all
+    @latest_posts= Micropost.all
   end
 
   # GET /users/1/edit
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @latest_posts= Post.all
+    @latest_posts= Micropost.all
     respond_to do |format|
       if @user.save
         log_in @user
@@ -105,5 +106,9 @@ class UsersController < ApplicationController
       if logged_in?
         redirect_to current_user
       end
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end
