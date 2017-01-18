@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page]) 
     @latest_posts= Post.all
   end
 
@@ -69,6 +69,14 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
+
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
