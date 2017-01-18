@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
   def new
-  	@latest_posts= Post.all
+  	@latest_posts= Micropost.all
   end
 
 
   def create
-  	@latest_posts= Post.all
+  	@latest_posts= Micropost.all
 
 
   	user=User.find_by(email: params[:session][:email].downcase)
