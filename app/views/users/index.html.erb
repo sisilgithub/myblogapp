@@ -10,30 +10,30 @@
   <div class="col-md-9">
     <div class="well">
       <h1>All Users</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <td><%= user.name %></td>
-              <td><%= user.email %></td>
-              <td><%= link_to 'Show', user %></td>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <br>
-      <%= link_to 'New User', new_user_path %>
+      <div class="row">
+        <% @users.each do |user| %>
+          <div class="col-md-6">
+            <div class="well">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-md-8">
+                  <h4><%= link_to current_user.name, current_user%></h4>
+                  <small><cite title="San Francisco, USA">London, United Kingdom
+                  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+                  <p>
+                    <i class="glyphicon glyphicon-envelope"></i><%= user.email %><br/>
+                    <i class="glyphicon glyphicon-gift"></i>April 01, 2017
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <%end%>
+      </div>
     </div>
   </div>
-
   <div class="col-md-3">
     <%= render('static_pages/trending')%>
   </div>

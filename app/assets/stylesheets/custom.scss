@@ -33,41 +33,10 @@ p {
 }
 
 
-/* footer */
-
 footer {
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #9d9d9d;
+  padding: 20px;
   background-color: black;
-  display: block;
-  height :100px;
-  padding-top:15px;
-}
-
-footer a {
-  color: #9d9d9d;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
-
+  }
 
 $gray-medium-light: #eaeaea;
 
