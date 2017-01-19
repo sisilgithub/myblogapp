@@ -6,11 +6,11 @@
       </div>
       <div class="col-md-8">
         <h4><%= link_to user.name, user%></h4>
-        <small><cite title="San Francisco, USA">London, United Kingdom
+        <small><cite title="San Francisco, USA"><%= user.location%>
         <i class="glyphicon glyphicon-map-marker"></i></cite></small>
         <p>
           <i class="glyphicon glyphicon-envelope" style="padding-right: 5px;"></i><%= user.email %><br/>
-          <i class="glyphicon glyphicon-gift" style="padding-right: 5px;"></i>April 01, 2017
+          <i class="glyphicon glyphicon-gift" style="padding-right: 5px;"></i><%= user.dob.to_date.strftime("%d " "%B, %Y") rescue nil%>
           <% if current_user.admin? && !current_user?(user) %>
             <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" }, class:"btn btn-danger btn-xs pull-right", style: "margin-top:5px;" %>
           <% end %>

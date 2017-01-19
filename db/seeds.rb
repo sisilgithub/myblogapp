@@ -18,6 +18,8 @@ User.create!(name:  "Admin",
   password = "password"
   User.create!(name:  name,
                email: email,
+               dob: "2000/01/01",
+               location: "Newcastle Upon Tyne, UK",
                password:              password,
                password_confirmation: password)
 end
