@@ -5,6 +5,7 @@
 		<div class="col-md-9 col-md-offset-1 ">
 		  <%= f.text_field :name, icon: "user"%>
 		  <%= f.email_field :email, icon: "envelope" %>
+		  <%= f.file_field :avatar %>
 		  <%= f.password_field :password, icon:"exclamation-sign" %>
 		  <%= f.password_field :password_confirmation, icon:"exclamation-sign" %>
 		  <%= f.submit "save changes", class: "btn btn-success" %>
